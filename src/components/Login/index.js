@@ -9,6 +9,8 @@ import Eric from '../assets/Eric.jpg';
 
 class Header extends Component {
     state = {
+        email: '',
+        password: ''
     }
 
     render() {
@@ -17,16 +19,15 @@ class Header extends Component {
 
                 {/*                                           HEADER                                                */}
                 <div className="header">
-                    <a href="#default" className="logo">
+                    <a href="#default" className="logo" >
                         Redwood Forest
                     </a>
-                    <div className="header-right">
-                        <a className="active" href="#home">Join The Community!</a>
-                        <a>Reviews</a>
-
-                        <a href="#contact">Contact</a>
-                        <a href="#about">About</a>
-                        <a >Sign Up</a>
+                    <div className="header-right" style = {{color: 'white'}}>
+                        <a className="active" href = "https://redwoodcodeacademy.com/" target = "_blank" >Join The Community!</a>
+                        <a style = {{color: "white"}} href="https://www.switchup.org/bootcamps/redwood-code-academy" target = "_blank">Reviews</a>
+                        <a href="#contact" style = {{color: "white"}}>Contact</a>
+                        <a href="#about" style = {{color: "white"}}>About</a>
+                        <a style = {{color: "white"}}>Find Your Cohort</a>
                     </div>
                 </div>
 
@@ -36,20 +37,20 @@ class Header extends Component {
                         <div className="form-group custom-form">
                             <div className="form-group">
                                 <img alt="Logo" src={Logo} className="LogoThumbnail" style={{ width: 75, height: 75, marginBottom: 0 }} />
-                                <p className="LogoThumbnail" style={{ fontWeight: 'bold', fontStyle: "italic", marginTop: 0, marginBottom: 60 }}>Redwood Forest</p>
+                                <p className="LogoThumbnail" style={{ fontWeight: 'bold', fontStyle: "italic", marginTop: 0, marginBottom: 40 }}>Redwood Forest</p>
                                 <h4 style={{ fontFamily: 'Mali' }}>Good Morning!</h4>
                                 <p style={{ color: '#505050', fontSize: 12, fontFamily: 'Open Sans Condensed', fontWeight: "bold" }}>Connect With Your Redwood Code Academy Alumni!</p>
                                 <hr style={{ marginBottom: 30, marginTop: 20 }} />
                                 <p style={{ textAlign: 'center', color: '#505050', fontFamily: 'Open Sans Condensed' }}>Ask Question, Find Jobs, Network!</p>
-                                <input value={this.state.zipCode} onChange={this.onZipChange} type="text" className="form-control" placeholder="Enter Your Zip Code" />
+                                <label style={{ margin: 0, fontWeight: 'bold', fontFamily: 'Mali' }}>Email</label>
+                                <input value={this.state.email} onChange = {(e) => this.setState({email: e.target.value})} type="text" className="form-control" placeholder="Email Address" />
+                                <label style={{ margin: 0, fontWeight: 'bold', fontFamily: 'Mali'  }}>Password</label>
+                                <input value = {this.state.password} onChange = {(e) => this.setState({password: e.target.value})} type="text" className="form-control" placeholder = "Enter Your Password" />
                             </div>
-                            <button type="submit" onClick={() => this.props.changePath("TUTORS")} className="btn btn-info float-right" style={{ marginBottom: 40 }}>Search!</button>
+                            <button type="submit" className="btn btn-info float-right" style={{ marginBottom: 40 }}>Login!</button>
                         </div>
                         <div className="custom-form2">
                             <div style={{ alignSelf: 'flex-end', marginLeft: 20, fontFamily: 'Srisakdi', color: 'white', width: 300 }}>
-                                <p style={{ margin: 0, textAlign: 'center' }}>Over 50 Verified Tutors and Counting</p>
-                                <p style={{ margin: 0, textAlign: 'center' }}>Online lessons. Real–world results.</p>
-                                <p style={{ marginBottom: 15, textAlign: 'center' }}>Private, 1–on–1 lessons with the expert instructor of your choice.</p>
                             </div>
                         </div>
                     </div>
@@ -66,7 +67,7 @@ class Header extends Component {
                             <button className="btn btn-light" style={{ borderColor: '#936A4A', backgroundColor: '#936A4A' }}><i className="fab fa-instagram fa-2x"></i></button>
                             <button className="btn btn-light" style={{ borderColor: '#936A4A', backgroundColor: '#936A4A' }}><i className="fab fa-tumblr fa-2x"></i></button>
                         </div>
-                        <h6 style={{ fontFamily: 'Open Sans Condensed', marginTop: 5 }}>Email us at:<a style={{ marginLeft: 5, color: "#D5A253" }} href="" target="_top">Tutor_ToGo@Gmail.com</a></h6>
+                        <h6 style={{ fontFamily: 'Open Sans Condensed', marginTop: 5 }}>Email us at:<a style={{ marginLeft: 5, color: "#D5A253" }} href="" target="_top">RedwoodForest@Gmail.com</a></h6>
                         <h6 style={{ fontFamily: 'Open Sans Condensed', marginTop: 5 }}>For More Information Call us at:  <a style={{ marginLeft: 5, color: "#D5A253" }} href="" target="_top">(714) 714-7147</a></h6>
                     </div>
 
