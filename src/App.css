@@ -91,6 +91,7 @@
   margin-top: -89px;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .profileThumbnail {
@@ -119,4 +120,70 @@ h2 {
   display: flex;
   flex-direction: row;
   margin-top: 20px;
+}
+
+
+
+
+
+/* Dropdown Menu */
+.dropbtn {
+  background-color: #3cb3cd;
+  color: black;
+  padding: 7px;
+  font-size: 18px;
+  border: none;
+  width: 400px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 400px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+/* Notice Button */
+.alert {
+  padding: 20px;
+  background-color: #2ba30d;
+  color: white;
+  width: 80%;
+}
+
+.closebtn {
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
 }
